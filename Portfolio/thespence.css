@@ -823,3 +823,71 @@ a {
         text-align: center;
     }
 }
+/* --- About Me Page Styles --- */
+.about-hero-section {
+    /* Reusing project-intro-section layout: flex, gap, padding */
+    display: flex;
+    gap: 40px;
+    padding-top: 100px; /* Slightly more top padding for a prominent feel */
+    padding-bottom: 100px;
+    align-items: flex-start; /* Align content to the top */
+}
+
+.about-content-left {
+    flex: 2; /* Give the text content more room */
+}
+
+.about-page-title {
+    /* Styled similar to project-name but slightly larger/more pronounced */
+    font-size: 72px; 
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.bio-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px; /* Space out the paragraphs */
+    opacity: 0.9;
+}
+
+.about-visual-right {
+    flex: 1; /* Give the visual less width than the text */
+    min-height: 400px;
+    background-color: #222222; /* Dark placeholder color */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the photo covers the container without distortion */
+    display: block;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 900px) {
+    .about-hero-section {
+        flex-direction: column; /* Stack vertically on mobile */
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+    .about-page-title {
+        font-size: 56px;
+    }
+    .about-visual-right {
+        order: -1; /* Move image above the text on mobile */
+        margin-bottom: 30px;
+        max-height: 400px;
+        width: 100%; /* Full width on mobile */
+    }
+    .bio-text {
+        text-align: left; /* Keep long bio text left-aligned for readability */
+    }
+    .bio-text p {
+        text-align: center;
+    }
+}
