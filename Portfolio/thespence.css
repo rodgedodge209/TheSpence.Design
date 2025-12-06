@@ -14,8 +14,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
-/* --- 1. Navigation Bar Styling --- */
 .main-nav {
     background-color: #000000;
     display: flex;
@@ -45,9 +43,6 @@ a {
 .nav-links li a:hover {
     color: #87ceeb;
 }
-
-
-/* --- 2. Hero Section Layout (Standard Desktop) --- */
 .hero-section {
     background-color: #111111; 
     display: flex;
@@ -55,7 +50,6 @@ a {
     align-items: center; 
     padding: 120px 40px; 
 }
-
 .hero-content-wrapper {
     max-width: 1200px; 
     width: 100%;
@@ -63,7 +57,6 @@ a {
     margin: 0 auto;
     align-items: center; 
 }
-
 .hero-content {
     flex: 1.5; 
     max-width: 50%; 
@@ -92,7 +85,6 @@ a {
     line-height: 1.5;
     max-width: 80%; 
 }
-
 .contact-button {
     padding: 10px 20px;
     border-radius: 25px; 
@@ -105,7 +97,6 @@ a {
     background-size: 100% 200%; 
     background-position: 0 100%; 
     transition: background-position 0.3s ease; 
-    
     color: #000000 !important;
     padding: 15px 35px; 
     font-size: 20px;
@@ -117,11 +108,9 @@ a {
 .contact-button.hero-cta:hover {
     background-position: 0 0; 
 }
-
 .hero-visual {
     flex: 2.5; 
     min-height: 400px; 
-    
 }
 .video-ratio-wrapper {
     position: relative; 
@@ -139,155 +128,12 @@ a {
     display: block;
     object-fit: cover; 
 }
-
-
-/* --- 5. Large Desktop Adjustments (Screens > 1200px) --- */
-@media (min-width: 1201px) {
-    
-    .hero-content-wrapper {
-        max-width: 1400px; 
-    }
-    
-    .hero-content {
-        flex: 1; 
-        padding-right: 80px; 
-    }
-    
-    .hero-visual {
-        flex: 3.5; 
-    }
-    
-    .hero-content h1 {
-        font-size: 96px; 
-    }
-}
-
-/* --- 6. Mobile Responsiveness (Screens <= 900px) --- */
-@media (max-width: 900px) {
-    .main-nav {
-        padding: 10px 20px;
-    }
-    
-    .hero-section {
-        padding: 0; 
-        min-height: auto; 
-        flex-direction: column; 
-    }
-    
-    .hero-visual {
-    flex: 2.5; 
-    min-width: 80vw;
-    min-height: auto;
-    }
-    .hero-content-wrapper {
-        flex-direction: column; 
-        padding: 60px 20px; 
-    }
-
-    .hero-content {
-        max-width: 100%; 
-        padding-right: 0;
-        margin-bottom: 40px;
-        text-align: center; 
-    }
-    
-    .hero-actions {
-        display: flex;
-        justify-content: center;
-    }
-
-    .hero-description {
-        max-width: 100%; 
-        text-align: center;
-    }
-    
-    .design-works-wrapper {
-        flex-direction: column; /* Stacks the title and carousel vertically */
-    }
-
-    .design-works-title {
-        min-width: 100%; /* Full width on mobile */
-        padding: 40px 20px;
-        text-align: center;
-    }
-    
-    .title-content-box {
-        max-width: 400px;
-    }
-
-    .design-works-title h1 {
-        font-size: 48px;
-    }
-    
-    .project-carousel-container {
-        padding: 40px 20px; /* Add horizontal padding to the scroll container */
-        width: 100vw;
-        overflow-x: scroll; /* Enable manual scroll on mobile */
-    }
-
-    .project-carousel-track {
-        padding-right: 20px; /* Adjust for mobile padding */
-        animation: none !important; /* Disable auto-scroll on small screens */
-    }
-
-    .project-item {
-        min-width: 80vw; /* Larger width for easier viewing/tapping */
-        width: 80vw;
-    }
-    
-    /* Footer Mobile Adjustments */
-    .footer-wrapper {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    .footer-social {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    /* Project Page Mobile Adjustments */
-    .project-page-wrapper {
-        padding: 0 20px;
-    }
-    .project-intro-section {
-        flex-direction: column;
-        padding-top: 40px;
-        padding-bottom: 30px;
-        text-align: center;
-    }
-    .project-name {
-        font-size: 48px;
-    }
-    .problem-action-section {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    /* Exploration Grid Mobile */
-    .exploration-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two items per row on mobile */
-        gap: 10px;
-        margin: 0 20px; /* Adjust margin for mobile padding */
-    }
-
-    .delivery-gallery {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .bottom-hero-gallery {
-        grid-template-columns: 1fr; /* Single column on mobile */
-    }
-}
-
-
-/* --- Client/Credibility Section --- */
 .client-section {
     background-color: #1a1a1a; 
     padding: 30px 40px; 
     display: flex;
     justify-content: center;
 }
-
 .client-wrapper {
     max-width: 1400px; 
     width: 100%;
@@ -295,33 +141,26 @@ a {
     align-items: center; 
     justify-content: space-between; 
 }
-
-/* --- Left Column: Logos Container --- */
 .client-logos {
     flex: 3; 
     display: flex; 
     align-items: center;
     overflow: hidden; 
 }
-
 .logo-carousel-track {
     display: flex;
     align-items: center;
     margin-left: -10px; 
     white-space: nowrap;
 }
-
 .client-logo {
     height: 40px; 
     width: auto;
     margin-right: 50px; 
-    
     filter: grayscale(100%) brightness(1.5); 
     opacity: 0.6; 
     flex-shrink: 0;
 }
-
-/* --- Right Column: Title and Divider --- */
 .client-title {
     flex: 1; 
     display: flex;
@@ -329,7 +168,6 @@ a {
     padding-left: 30px; 
     border-left: 1px solid #444444; 
 }
-
 .client-title h2 {
     color: #aaaaaa; 
     font-size: 18px;
@@ -338,13 +176,10 @@ a {
     text-transform: uppercase;
     text-align: left;
 }
-
-/* --- Design Works Section (Horizontal Carousel) --- */
 .design-works-section {
     background-color: #111111;
     padding: 0;
 }
-
 .design-works-wrapper {
     display: flex;
     max-width: 1600px; 
@@ -352,8 +187,6 @@ a {
     width: 100%;
     overflow-x: hidden; 
 }
-
-/* --- Left Column: Title Block --- */
 .design-works-title {
     background-color: #d11414; 
     min-width: 350px; 
@@ -363,7 +196,6 @@ a {
     padding: 40px;
     flex-shrink: 0; 
 }
-
 .design-works-title h1 {
     color: #ffffff;
     font-size: 56px;
@@ -371,29 +203,23 @@ a {
     line-height: 1.1;
     margin-bottom: 10px;
 }
-
 .design-works-title p {
     color: #ffffff;
     font-size: 16px;
     line-height: 1.5;
     opacity: 0.9;
 }
-
-
-/* --- Right Column: Carousel Container --- */
 .project-carousel-container {
     flex-grow: 1; 
     overflow: hidden; 
     padding: 40px 0; 
 }
-
 .project-carousel-track {
     display: inline-flex; 
     gap: 30px; 
     padding-right: 40px; 
     white-space: nowrap;
 }
-
 .project-item {
     display: flex;
     flex-direction: column;
@@ -404,11 +230,9 @@ a {
     transition: opacity 0.3s ease;
     flex-shrink: 0;
 }
-
 .project-item:hover {
     opacity: 0.8;
 }
-
 .project-item img {
     display: block;
     width: 100%;
@@ -416,7 +240,6 @@ a {
     object-fit: cover;
     margin-bottom: 10px;
 }
-
 .project-info {
     color: #ffffff;
     font-size: 14px;
@@ -424,12 +247,6 @@ a {
     text-align: left;
     white-space: normal;
 }
-
-
-/* ---------------------------------------------------------------------- */
-/* --- PROJECT PAGE STYLES (for portfolio.html) --- */
-/* ---------------------------------------------------------------------- */
-
 .project-page-wrapper {
     max-width: 1200px;
     width: 100%;
@@ -447,9 +264,6 @@ a {
     max-width: 100%;
     text-align: left;
 }
-
-
-/* --- 2. Project Intro Section --- */
 .project-intro-section {
     display: flex;
     gap: 40px;
@@ -480,7 +294,7 @@ a {
 .project-hero-shot {
     flex: 2;
     min-height: 400px;
-    background-color: #222222; /* Placeholder for image */
+    background-color: #222222;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -492,9 +306,6 @@ a {
     object-fit: cover;
     display: block;
 }
-
-
-/* --- 3. The Problem/Solution Section --- */
 .problem-action-section {
     display: flex;
     gap: 40px;
@@ -521,35 +332,29 @@ a {
     font-size: 16px;
     border-left: 4px solid #87ceeb;
 }
-
-
-/* --- 4. Exploration/Solutions Grid Section (FULL WIDTH) --- */
 .exploration-grid-section {
     width: 100%; 
-    background-color: #111111; /* Changed background color to match body background */
+    background-color: #111111; 
     padding-top: 60px;
     padding-bottom: 60px;
 }
-/* New wrapper to keep the title centered with other content */
 .grid-content-wrapper {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0 40px; 
 }
-
-/* The Grid itself spreads across the whole viewport width, but we need to center the content */
 .exploration-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    max-width: 1200px; /* Constrain the grid items themselves */
+    max-width: 1200px;
     width: 100%;
-    margin: 0 auto; /* CENTER the grid container */
-    padding: 0 40px; /* Add padding consistent with .project-page-wrapper */
+    margin: 0 auto;
+    padding: 0 40px;
 }
 .solution-card {
-    background-color: #222222; /* Changed card background to a lighter grey */
+    background-color: #222222;
     padding: 20px;
     border-radius: 8px;
 }
@@ -570,8 +375,6 @@ a {
     font-size: 14px;
     opacity: 0.8;
 }
-
-/* --- 5. Revisions/Feedback Section --- */
 .revisions-section {
     background-color: #1a1a1a;
     padding: 40px;
@@ -588,9 +391,6 @@ a {
     line-height: 1.6;
     opacity: 0.9;
 }
-
-
-/* --- 6. Delivery/Further Exploration Gallery --- */
 .delivery-gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -604,12 +404,9 @@ a {
     object-fit: cover;
     display: block;
 }
-
-
-/* --- 7. Hero Shot/Render Gallery (Bottom) --- */
 .bottom-hero-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns based on wireframe */
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin-bottom: 80px;
 }
@@ -624,9 +421,6 @@ a {
     object-fit: cover;
     display: block;
 }
-
-
-/* --- 8. Footer Section Styling (New) --- */
 .main-footer {
     background-color: #000000;
     padding: 40px 40px;
@@ -643,7 +437,7 @@ a {
 .footer-cta {
     font-size: 18px;
     padding: 12px 30px;
-    background: #d11414; /* Using the red from the Design Works section */
+    background: #d11414;
     border-radius: 35px;
     color: #ffffff !important;
 }
@@ -664,7 +458,7 @@ a {
 .social-links img {
     height: 24px;
     width: 24px;
-    filter: invert(1); /* Makes icons white */
+    filter: invert(1);
     opacity: 0.8;
 }
 .footer-copy p {
@@ -672,85 +466,16 @@ a {
     opacity: 0.5;
     margin: 0;
 }
-
-
-/* --- Mobile Adjustments for Project Page (Screens <= 900px) --- */
-@media (max-width: 900px) {
-    .project-page-wrapper {
-        padding: 0 20px;
-    }
-    .project-intro-section {
-        flex-direction: column;
-        padding-top: 40px;
-        padding-bottom: 30px;
-        text-align: center;
-    }
-    .project-name {
-        font-size: 48px;
-    }
-    .problem-action-section {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    /* Exploration Grid Mobile */
-    .exploration-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two items per row on mobile */
-        gap: 10px;
-        max-width: 100%; /* Ensure full width on mobile */
-        padding: 0 20px;
-        margin: 0 auto;
-    }
-
-    .delivery-gallery {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .bottom-hero-gallery {
-        grid-template-columns: 1fr; /* Single column on mobile */
-    }
-    
-    /* Footer Mobile Adjustments */
-    .footer-wrapper {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    .footer-social {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-/* --- CSS Keyframes for Infinite Scrolling --- */
-@keyframes scrollClientLogos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } 
-}
-
-@keyframes scrollProjects {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* Default animation properties (will be overwritten/managed by JS) */
-.client-section .logo-carousel-track {
-    animation: scrollClientLogos 40s linear infinite;
-}
-
-.design-works-section .project-carousel-track {
-    animation: scrollProjects 30s linear infinite; 
-}
-/* --- Contact Page Styles --- */
 .contact-page-main {
     display: flex;
     justify-content: center;
     padding: 80px 40px;
 }
 .contact-wrapper {
-    max-width: 650px; /* Narrower width for a focused form */
+    max-width: 650px;
     width: 100%;
     margin: 0 auto;
 }
-
 .contact-header {
     text-align: center;
     margin-bottom: 50px;
@@ -764,8 +489,6 @@ a {
     font-size: 18px;
     opacity: 0.8;
 }
-
-/* Form Styling */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -797,21 +520,193 @@ a {
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #87ceeb; /* Blue accent border on focus */
+    border-color: #87ceeb;
     outline: none;
 }
 .contact-form textarea {
-    resize: vertical; /* Allow resizing only vertically */
+    resize: vertical;
 }
 .form-submit-btn {
     margin-top: 20px;
     padding: 15px 40px;
     font-size: 18px;
-    /* Uses the existing .hero-cta styles for the hover effect */
 }
-
-/* Mobile Adjustments for Contact Page */
-@media (max-width: 650px) {
+.about-hero-section {
+    display: flex;
+    gap: 40px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    align-items: flex-start;
+}
+.about-content-left {
+    flex: 2;
+}
+.about-page-title {
+    font-size: 72px; 
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+.bio-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+.about-visual-right {
+    flex: 1;
+    min-height: 400px;
+    background-color: #222222;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.contact-page-main + .main-footer .footer-wrapper {
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-page-main + .main-footer .footer-social {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.contact-page-main + .main-footer .footer-copy {
+    width: 100%;
+    text-align: center;
+}
+@keyframes scrollClientLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+@keyframes scrollProjects {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.client-section .logo-carousel-track {
+    animation: scrollClientLogos 40s linear infinite;
+}
+.design-works-section .project-carousel-track {
+    animation: scrollProjects 30s linear infinite; 
+}
+@media (min-width: 1201px) {
+    .hero-content-wrapper {
+        max-width: 1400px; 
+    }
+    .hero-content {
+        flex: 1; 
+        padding-right: 80px; 
+    }
+    .hero-visual {
+        flex: 3.5; 
+    }
+    .hero-content h1 {
+        font-size: 96px; 
+    }
+}
+@media (max-width: 900px) {
+    .main-nav {
+        padding: 10px 20px;
+    }
+    .hero-section {
+        padding: 0; 
+        min-height: auto; 
+        flex-direction: column; 
+    }
+    .hero-visual {
+        flex: 2.5; 
+        min-width: 80vw;
+        min-height: auto;
+    }
+    .hero-content-wrapper {
+        flex-direction: column; 
+        padding: 60px 20px; 
+    }
+    .hero-content {
+        max-width: 100%; 
+        padding-right: 0;
+        margin-bottom: 40px;
+        text-align: center; 
+    }
+    .hero-actions {
+        display: flex;
+        justify-content: center;
+    }
+    .hero-description {
+        max-width: 100%; 
+        text-align: center;
+    }
+    .design-works-wrapper {
+        flex-direction: column;
+    }
+    .design-works-title {
+        min-width: 100%;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .title-content-box {
+        max-width: 400px;
+    }
+    .design-works-title h1 {
+        font-size: 48px;
+    }
+    .project-carousel-container {
+        padding: 40px 20px;
+        width: 100vw;
+        overflow-x: scroll;
+    }
+    .project-carousel-track {
+        padding-right: 20px;
+        animation: none !important;
+    }
+    .project-item {
+        min-width: 80vw;
+        width: 80vw;
+    }
+    .footer-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-social {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .project-page-wrapper {
+        padding: 0 20px;
+    }
+    .project-intro-section {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    .project-name {
+        font-size: 48px;
+    }
+    .problem-action-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .exploration-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    .delivery-gallery {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .bottom-hero-gallery {
+        grid-template-columns: 1fr;
+    }
     .contact-page-main {
         padding: 40px 20px;
     }
@@ -822,55 +717,8 @@ a {
         width: 100%;
         text-align: center;
     }
-}
-/* --- About Me Page Styles --- */
-.about-hero-section {
-    /* Reusing project-intro-section layout: flex, gap, padding */
-    display: flex;
-    gap: 40px;
-    padding-top: 100px; /* Slightly more top padding for a prominent feel */
-    padding-bottom: 100px;
-    align-items: flex-start; /* Align content to the top */
-}
-
-.about-content-left {
-    flex: 2; /* Give the text content more room */
-}
-
-.about-page-title {
-    /* Styled similar to project-name but slightly larger/more pronounced */
-    font-size: 72px; 
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 30px;
-}
-
-.bio-text p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 25px; /* Space out the paragraphs */
-    opacity: 0.9;
-}
-
-.about-visual-right {
-    flex: 1; /* Give the visual less width than the text */
-    min-height: 400px;
-    background-color: #222222; /* Dark placeholder color */
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.about-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the photo covers the container without distortion */
-    display: block;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 900px) {
     .about-hero-section {
-        flex-direction: column; /* Stack vertically on mobile */
+        flex-direction: column;
         padding-top: 60px;
         padding-bottom: 60px;
         text-align: center;
@@ -879,13 +727,13 @@ a {
         font-size: 56px;
     }
     .about-visual-right {
-        order: -1; /* Move image above the text on mobile */
+        order: -1;
         margin-bottom: 30px;
         max-height: 400px;
-        width: 100%; /* Full width on mobile */
+        width: 100%;
     }
     .bio-text {
-        text-align: left; /* Keep long bio text left-aligned for readability */
+        text-align: left;
     }
     .bio-text p {
         text-align: center;
