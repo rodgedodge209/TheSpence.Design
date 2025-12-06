@@ -258,3 +258,272 @@ a {
     text-transform: uppercase;
     text-align: left;
 }
+/* --- Paste New CSS Below Existing Styles (e.g., after the Design Works Section styles) --- */
+
+
+/* --- New Project Page Global Styles --- */
+.project-page-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.section-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+.full-width-title {
+    max-width: 100%;
+    text-align: left;
+}
+
+
+/* --- 2. Project Intro Section --- */
+.project-intro-section {
+    display: flex;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.project-text-content {
+    flex: 1;
+}
+.project-subtitle {
+    color: #87ceeb;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.project-name {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+.project-description {
+    font-size: 18px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+.project-hero-shot {
+    flex: 2;
+    min-height: 400px;
+    background-color: #222222; /* Placeholder for image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* --- 3. The Problem/Solution Section --- */
+.problem-action-section {
+    display: flex;
+    gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.problem-description-box,
+.action-items-box {
+    flex: 1;
+}
+.problem-description-box .section-title,
+.action-items-box .section-title {
+    margin-top: 0;
+}
+.action-items-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+.action-items-box li {
+    background-color: #1a1a1a;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    border-left: 4px solid #87ceeb;
+}
+
+
+/* --- 4. Exploration/Solutions Grid Section --- */
+.exploration-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+.solution-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+}
+.solution-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block;
+}
+.solution-card h3 {
+    color: #87ceeb;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.solution-description {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* --- 5. Revisions/Feedback Section --- */
+.revisions-section {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+.revisions-section .section-title {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 24px;
+}
+.revision-summary {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+
+/* --- 6. Delivery/Further Exploration Gallery --- */
+.delivery-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 60px;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* --- 7. Hero Shot/Render Gallery (Bottom) --- */
+.bottom-hero-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns based on wireframe */
+    gap: 15px;
+    margin-bottom: 80px;
+}
+.hero-gallery-item {
+    background-color: #1a1a1a;
+    min-height: 350px;
+    overflow: hidden;
+}
+.hero-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* --- 8. Footer Section Styling (New) --- */
+.main-footer {
+    background-color: #000000;
+    padding: 40px 40px;
+    display: flex;
+    justify-content: center;
+}
+.footer-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-cta {
+    font-size: 18px;
+    padding: 12px 30px;
+    background: #d11414; /* Using the red from the Design Works section */
+    border-radius: 35px;
+    color: #ffffff !important;
+}
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-social p {
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 0;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-links img {
+    height: 24px;
+    width: 24px;
+    filter: invert(1); /* Makes icons white */
+    opacity: 0.8;
+}
+.footer-copy p {
+    font-size: 12px;
+    opacity: 0.5;
+    margin: 0;
+}
+
+
+/* --- Mobile Adjustments for Project Page (Screens <= 900px) --- */
+@media (max-width: 900px) {
+    .project-page-wrapper {
+        padding: 0 20px;
+    }
+    .project-intro-section {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    .project-name {
+        font-size: 48px;
+    }
+    .problem-action-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .exploration-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on mobile */
+    }
+    .delivery-gallery {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .bottom-hero-gallery {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    
+    /* Footer Mobile Adjustments */
+    .footer-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-social {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
