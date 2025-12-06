@@ -739,3 +739,87 @@ a {
 .design-works-section .project-carousel-track {
     animation: scrollProjects 30s linear infinite; 
 }
+/* --- Contact Page Styles --- */
+.contact-page-main {
+    display: flex;
+    justify-content: center;
+    padding: 80px 40px;
+}
+.contact-wrapper {
+    max-width: 650px; /* Narrower width for a focused form */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.page-title {
+    font-size: 56px;
+    font-weight: 800;
+    margin: 10px 0 20px 0;
+}
+.contact-description {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #333333;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #87ceeb; /* Blue accent border on focus */
+    outline: none;
+}
+.contact-form textarea {
+    resize: vertical; /* Allow resizing only vertically */
+}
+.form-submit-btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 18px;
+    /* Uses the existing .hero-cta styles for the hover effect */
+}
+
+/* Mobile Adjustments for Contact Page */
+@media (max-width: 650px) {
+    .contact-page-main {
+        padding: 40px 20px;
+    }
+    .page-title {
+        font-size: 48px;
+    }
+    .form-submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
