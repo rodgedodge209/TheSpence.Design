@@ -525,8 +525,8 @@ a {
 
 /* --- 4. Exploration/Solutions Grid Section (FULL WIDTH) --- */
 .exploration-grid-section {
-    width: 100%; /* Make the section span the full viewport width */
-    background-color: #1a1a1a; /* Using a dark background for this breakout section */
+    width: 100%; 
+    background-color: #111111; /* Changed background color to match body background */
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -538,15 +538,18 @@ a {
     padding: 0 40px; 
 }
 
-/* The Grid itself spreads across the whole viewport width */
+/* The Grid itself spreads across the whole viewport width, but we need to center the content */
 .exploration-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    margin: 0 40px; /* Add margin/padding to the sides of the grid items */
+    max-width: 1200px; /* Constrain the grid items themselves */
+    width: 100%;
+    margin: 0 auto; /* CENTER the grid container */
+    padding: 0 40px; /* Add padding consistent with .project-page-wrapper */
 }
 .solution-card {
-    background-color: #111111; /* Changed background for better contrast against the section background */
+    background-color: #222222; /* Changed card background to a lighter grey */
     padding: 20px;
     border-radius: 8px;
 }
@@ -694,7 +697,9 @@ a {
     .exploration-grid {
         grid-template-columns: repeat(2, 1fr); /* Two items per row on mobile */
         gap: 10px;
-        margin: 0 20px; /* Adjust margin for mobile padding */
+        max-width: 100%; /* Ensure full width on mobile */
+        padding: 0 20px;
+        margin: 0 auto;
     }
 
     .delivery-gallery {
