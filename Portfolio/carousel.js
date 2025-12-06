@@ -1,43 +1,42 @@
-// --- Logo Carousel Script (js/carousel.js) ---
-
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Get the track element
-    const logoTrack = document.querySelector('.logo-carousel-track');
+    
+    // Function to set up an infinite scrolling carousel
+    function setupInfiniteCarousel(trackSelector, itemSelector, speedSeconds) {
+        const track = document.querySelector(trackSelector);
+        if (!track) return; 
 
-    // Safety check: only run if the element exists
-    if (logoTrack) {
-        // 2. Define the animation speed (in pixels per frame)
-        const scrollSpeed = 0.4;
+        // 1. Clone all original items
+        const items = Array.from(track.querySelectorAll(itemSelector));
+        items.forEach(item => {
+            // 'true' means a deep clone (clones the element and its children)
+            const clone = item.cloneNode(true); 
+            clone.classList.add('clone'); // Add a class for identification if needed
+            track.appendChild(clone);
+        });
 
-        // 3. Duplicate the logos to create the seamless loop illusion
-        logoTrack.innerHTML += logoTrack.innerHTML;
-
-        // 4. Initialize the current scroll position
-        let currentScroll = 0;
-
-        // 5. Define the function that updates the position on every frame
-        function animateScroll() {
-            // Calculate the distance one full set of original logos covers
-            const resetPoint = logoTrack.scrollWidth / 2;
-
-            // Decrease the scroll position by the defined speed
-            currentScroll -= scrollSpeed;
-
-            // Reset the position back to zero (the beginning of the duplicated set)
-            if (currentScroll <= -resetPoint) {
-                currentScroll = 0;
-            }
-
-            // Apply the new position using CSS translate (hardware accelerated)
-            logoTrack.style.transform = `translateX(${currentScroll}px)`;
-
-            // Continue the loop
-            window.requestAnimationFrame(animateScroll);
+        // 2. Set the CSS animation duration dynamically (overwrites the default in CSS)
+        // This is necessary to ensure the speedSeconds is applied accurately
+        if (track.classList.contains('logo-carousel-track')) {
+            track.style.animationDuration = `${speedSeconds}s`;
+        } else if (track.classList.contains('project-carousel-track')) {
+             // Only apply auto-scroll on desktop screens for project carousel
+             if (window.innerWidth > 900) {
+                 track.style.animationDuration = `${speedSeconds}s`;
+             }
         }
-
-        // 6. Start the animation loop
-        animateScroll();
-    } else {
-        console.warn("Logo track element (.logo-carousel-track) not found.");
     }
+
+    // Setup Client Logo Carousel (faster speed for shorter track)
+    setupInfiniteCarousel(
+        '.client-section .logo-carousel-track', 
+        '.client-logo', 
+        40 // 40 seconds duration
+    );
+
+    // Setup Project Carousel (slightly slower speed for larger items)
+    setupInfiniteCarousel(
+        '.design-works-section .project-carousel-track', 
+        '.project-item', 
+        50 // 50 seconds duration
+    );
 });
